@@ -1,7 +1,13 @@
 import { BrainCircuit } from 'lucide-react';
 import styles from './Navbar.module.scss';
+import { useState } from 'react';
 
 export default function Navbar() {
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
+
+  function handleMobileMenu() {
+    setIsMobileMenu((isOpened) => !isOpened);
+  }
   return (
     <nav className={styles.nav}>
       <div className={styles.navContent}>
@@ -30,6 +36,12 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
+        <button
+          onClick={handleMobileMenu}
+          className={`${styles.burgerBtn} ${isMobileMenu && styles.opened}`}
+        >
+          <span></span>
+        </button>
       </div>
     </nav>
   );
