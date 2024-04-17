@@ -14,7 +14,7 @@ export default function Navbar() {
         <a className={styles.navLogo} href="#">
           <BrainCircuit strokeWidth={3} size={52} />
         </a>
-        <ul className={styles.navList}>
+        <ul className={`${styles.navList} ${isMobileMenu && styles.opened}`}>
           <li className={styles.navItem}>
             <a href="#" className={styles.navLink}>
               Home
