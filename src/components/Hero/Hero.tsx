@@ -1,3 +1,4 @@
+import Skills from '../Skills/Skills';
 import styles from './Hero.module.scss';
 
 export default function Hero() {
@@ -16,13 +17,14 @@ export default function Hero() {
             </span>
             . I am a passionate Front-end React Developer based in Kazan, Russia
           </p>
+          <Skills />
         </div>
         <div className={styles.heroImgContainer}>
           <div className={styles.heroImgHolder}>
             <img
               className={styles.heroImg}
               src="./assets/images/hero-image.jpg"
-              alt="Hero"
+              alt="Image of the front-end developer Niaz Mukhametzianov"
             />
           </div>
         </div>
