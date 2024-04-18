@@ -2,3 +2,13 @@ $primary-color: #ff9900;
 $secondary-color: #00a7ea;
 $dark-color: #060417;
 $white-color: #ffffff;
+
+%container {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: 1300px) {
+    padding: 0 8px;
+  }
+}
