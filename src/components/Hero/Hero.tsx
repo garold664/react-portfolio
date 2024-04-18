@@ -7,7 +7,7 @@ export default function Hero() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
             Front-End <span className={styles.heroTitleHighlight}>React</span>{' '}
-            Developer 👋
+            Developer <span className={styles.heroHand}>👋</span>
           </h1>
           <p className={styles.heroSubtitle}>
             Hello, my name is{' '}
