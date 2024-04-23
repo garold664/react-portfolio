@@ -52,6 +52,10 @@ const projects = [
   },
 ];
 
+const projectCategories = [
+  ...new Set(projects.map((project) => project.category)),
+];
+
 export default function Portfolio() {
   const [category, setCategory] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -93,9 +97,9 @@ export default function Portfolio() {
           <li>
             <CategoryButton title="All" />
           </li>
-          {projects.map((project) => (
-            <li key={project.id}>
-              <CategoryButton title={project.category} />
+          {projectCategories.map((project) => (
+            <li key={project}>
+              <CategoryButton title={project} />
             </li>
           ))}
         </ul>
