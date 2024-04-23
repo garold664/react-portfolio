@@ -38,7 +38,8 @@
 
 .portfolioList {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
   padding: 0;
   list-style: none;
@@ -53,6 +54,7 @@
   width: 28%;
   height: 240px;
   // padding: 10px;
+  margin-bottom: 20px;
   border-radius: 12px;
   border: 2px solid $secondary-color;
   overflow: hidden;
@@ -114,4 +116,38 @@
 .active {
   background-color: $secondary-color;
   color: $white-color;
+}
+
+.portfolioLinks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  a {
+    color: $white-color;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.3s, color 0.3s;
+    &:hover {
+      text-decoration: underline $primary-color;
+      // color: $primary-color;
+    }
+
+    &:has(img) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      padding: 3px;
+      background-color: #fff;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  img {
+    display: inline-block;
+    width: 20px;
+  }
 }

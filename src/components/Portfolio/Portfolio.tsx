@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Portfolio.module.scss';
+import { Github } from 'lucide-react';
 
 const projects = [
   {
@@ -9,6 +10,8 @@ const projects = [
       'MERN project: React, Node, Express, MongoDB, Typescript, TailWind',
     image: 'https://via.placeholder.com/300x200',
     category: 'Full-stack',
+    demo: 'https://booking-app-front-1v42.onrender.com/',
+    github: 'https://github.com/garold664/booking-app',
   },
   {
     id: 2,
@@ -17,6 +20,8 @@ const projects = [
       'React project: React, Typescript, Firebase, Sass. You can add new posts, sort posts by title, date, author, reactions number or content.',
     image: 'https://via.placeholder.com/300x200',
     category: 'React',
+    demo: 'https://garold664.github.io/react-redux-posts/',
+    github: 'https://github.com/garold664/react-redux-posts/',
   },
   {
     id: 3,
@@ -24,6 +29,26 @@ const projects = [
     description: 'React project: React, Typescript, Tailwind.',
     image: 'https://via.placeholder.com/300x200',
     category: 'Small projects',
+    demo: '',
+    github: 'https://github.com/garold664/youtube-homepage-clone',
+  },
+  {
+    id: 4,
+    name: 'Pink Website',
+    description: 'Responsive Website: Gulp, Sass, Vanilla js',
+    image: 'https://via.placeholder.com/300x200',
+    category: 'Responsive Websites',
+    demo: 'https://garold664.github.io/myPortfolio/portfolio/pink/index.html',
+    github: '',
+  },
+  {
+    id: 5,
+    name: 'Mishka Website',
+    description: 'Responsive Website: Gulp, Sass, Vanilla js',
+    image: 'https://via.placeholder.com/300x200',
+    category: 'Responsive Websites',
+    demo: 'https://garold664.github.io/myPortfolio/portfolio/mishka/index.html',
+    github: '',
   },
 ];
 
@@ -85,6 +110,16 @@ export default function Portfolio() {
               />
               <div className={styles.portfolioInfo}>
                 <h3 className={styles.portfolioProjectTitle}>{project.name}</h3>
+                <div className={styles.portfolioLinks}>
+                  {project.github && (
+                    <a href={project.github} target="_blank">
+                      <img src="./assets/icons/github.svg" alt="" />
+                    </a>
+                  )}
+                  <a href={project.demo} target="_blank">
+                    demo
+                  </a>
+                </div>
                 <p className={styles.portfolioDescription}>
                   {project.description}
                 </p>
