@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Portfolio.module.scss';
-import { Github } from 'lucide-react';
 
 const projects = [
   {

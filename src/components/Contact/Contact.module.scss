@@ -1,0 +1,82 @@
+@import '../../styles/variables.scss';
+
+.contact {
+  background-color: $dark-color;
+  color: $white-color;
+  padding: 70px 0;
+
+  h2 {
+    @extend %title;
+  }
+}
+
+.contactContainer {
+  @extend %container;
+}
+
+.contactList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+
+  margin: 80px auto;
+
+  li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    display: block;
+    height: 150%;
+    border-right: 2px solid $secondary-color;
+    filter: blur(2px);
+  }
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  // align-items: center;
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+    border-radius: 15px;
+    padding: 3px;
+    transition: box-shadow 0.3s ease-in-out;
+    outline: none;
+    &:hover,
+    &:focus {
+      // color: $primary-color;
+      box-shadow: 0 0 10px $primary-color;
+    }
+
+    &:active {
+      box-shadow: 0 0 30px $primary-color;
+    }
+  }
+}
+
+.contactIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px $white-color;
+
+  background-color: $primary-color;
+
+  img {
+    width: 50px;
+  }
+}

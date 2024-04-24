@@ -12,10 +12,8 @@
 }
 
 .portfolioTitle {
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 70px;
-  color: $primary-color;
+  @extend %title;
+  margin-top: 80px;
 }
 
 .portfolioCategories {
