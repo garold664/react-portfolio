@@ -28,7 +28,7 @@ const projects = [
     description: 'React project: React, Typescript, Tailwind.',
     image: './assets/images/300x200.png',
     category: 'Small projects',
-    demo: '',
+    demo: 'https://garold664.github.io/youtube-homepage-clone',
     github: 'https://github.com/garold664/youtube-homepage-clone',
   },
   {
