@@ -172,7 +172,7 @@
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: $mobile) {
   .navList {
     position: fixed;
     left: 0;

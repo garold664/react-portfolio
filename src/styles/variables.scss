@@ -4,6 +4,10 @@ $secondary-color: #00a7ea;
 $dark-color: #29254f;
 $white-color: #ffffff;
 
+// media widths
+$tablet: 1299px;
+$mobile: 769px;
+
 %container {
   max-width: 1300px;
   margin: 0 auto;
