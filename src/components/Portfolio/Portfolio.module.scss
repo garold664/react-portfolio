@@ -43,6 +43,10 @@
   padding: 0;
   list-style: none;
   color: $dark-color;
+
+  @media screen and (max-width: $mobile) {
+    // flex-direction: column;
+  }
 }
 
 .portfolioItem {
@@ -51,7 +55,8 @@
   flex-direction: column;
   align-items: center;
   width: 28%;
-  height: 240px;
+  // height: 240px;
+  aspect-ratio: 3 / 2;
   // padding: 10px;
   margin-bottom: 20px;
   border-radius: 12px;
@@ -90,11 +95,18 @@
   &:hover::after {
     translate: 0 0;
   }
+
+  @media screen and (max-width: $mobile) {
+    width: 85%;
+  }
 }
 
 .portfolioImg {
   width: 100%;
+  height: 100%;
+
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .portfolioInfo {
