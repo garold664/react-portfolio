@@ -17,6 +17,7 @@
 .contactList {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   gap: 40px;
   padding: 0;
@@ -39,6 +40,32 @@
     height: 150%;
     border-right: 2px solid $secondary-color;
     filter: blur(2px);
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    gap: 80px;
+
+    li {
+      width: 80%;
+    }
+
+    li:not(:last-child)::before {
+      right: auto;
+      left: 50%;
+      translate: -50%;
+      bottom: -40px;
+      border: none;
+      height: 0;
+      width: 85%;
+      border-bottom: 2px solid $secondary-color;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    li {
+      width: 95%;
+    }
   }
 }
 .contactInfo {
@@ -63,6 +90,10 @@
     &:active {
       box-shadow: 0 0 30px $primary-color;
     }
+  }
+
+  @media screen and (max-width: $tablet) {
+    text-align: right;
   }
 }
 

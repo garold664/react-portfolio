@@ -25,7 +25,7 @@ export default function Contact() {
             <div className={styles.contactInfo}>
               <h3>GitHub: </h3>
               <a href="https://github.com/garold664" target="_blank">
-                https://github.com/garold664
+                https://github.com/@
               </a>
             </div>
           </li>
