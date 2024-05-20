@@ -49,6 +49,15 @@ const projects = [
     demo: 'https://garold664.github.io/myPortfolio/portfolio/mishka/index.html',
     github: '',
   },
+  {
+    id: 6,
+    name: 'Manage Landing Page',
+    description: 'Responsive Website: Vite, Vanilla CSS, Vanilla js',
+    image: './assets/images/manage-landing.jpg',
+    category: 'Responsive Websites',
+    demo: 'https://garold664.github.io/landing-page-1/',
+    github: 'https://github.com/garold664/landing-page-1',
+  },
 ];
 
 const projectCategories = [
