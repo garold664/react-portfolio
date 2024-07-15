@@ -126,6 +126,8 @@
   padding: 20px;
   opacity: 0;
   translate: 0 100%;
+  max-height: 100%;
+  overflow: auto;
   transition: opacity 0.3s linear 0.1s, translate 0.3s;
 
   @media screen and (max-width: $mobile) {
