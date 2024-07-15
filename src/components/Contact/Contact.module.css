@@ -1,0 +1,116 @@
+.contactContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 1300px) {
+  .contactContainer {
+    padding: 0 16px;
+  }
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 70px;
+  color: #ff9900;
+}
+@media screen and (max-width: 769px) {
+  .contact h2 {
+    font-size: calc((1vh + 1vw) * 3.5);
+  }
+}
+
+.contact {
+  background-color: #29254f;
+  color: #ffffff;
+  padding: 70px 0;
+}
+.contactList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+  margin: 80px auto;
+}
+.contactList li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.contactList li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  display: block;
+  height: 150%;
+  border-right: 2px solid #00a7ea;
+  filter: blur(2px);
+}
+@media screen and (max-width: 1299px) {
+  .contactList {
+    flex-direction: column;
+    gap: 80px;
+  }
+  .contactList li {
+    width: 80%;
+  }
+  .contactList li:not(:last-child)::before {
+    right: auto;
+    left: 50%;
+    translate: -50%;
+    bottom: -40px;
+    border: none;
+    height: 0;
+    width: 85%;
+    border-bottom: 2px solid #00a7ea;
+  }
+}
+@media screen and (max-width: 769px) {
+  .contactList li {
+    width: 95%;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.contactInfo a {
+  text-decoration: none;
+  color: #00a7ea;
+  border-radius: 15px;
+  padding: 3px;
+  transition: box-shadow 0.3s ease-in-out;
+  outline: none;
+}
+.contactInfo a:hover, .contactInfo a:focus {
+  box-shadow: 0 0 10px #ff9900;
+}
+.contactInfo a:active {
+  box-shadow: 0 0 30px #ff9900;
+}
+@media screen and (max-width: 1299px) {
+  .contactInfo {
+    text-align: right;
+  }
+}
+
+.contactIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff;
+  background-color: #ff9900;
+}
+.contactIcon img {
+  width: 50px;
+}

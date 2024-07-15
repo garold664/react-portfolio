@@ -1,0 +1,50 @@
+.skills {
+  margin-top: 70px;
+}
+
+.skillsTitle {
+  margin-bottom: 20px;
+}
+
+.skillsList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skillsItem {
+  position: relative;
+  background-color: #29254f;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.skillsItem img {
+  max-width: 100%;
+}
+.skillsItem::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 50%;
+  transition: box-shadow 0.4s;
+}
+.skillsItem:hover {
+  transform: translateY(-5px);
+}
+.skillsItem:hover::before {
+  box-shadow: 0 10px 10px 5px #00a7ea;
+}

@@ -1,0 +1,158 @@
+.heroContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 1300px) {
+  .heroContainer {
+    padding: 0 16px;
+  }
+}
+
+.hero {
+  /* position: relative; */
+  overflow: hidden;
+  min-height: calc(100vh - 107px);
+  background-color: #4f4fb5;
+  opacity: 0.8;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(45deg, #0a0d37 0, #0a0d37 1px, #4f4fb5 0, #4f4fb5 50%);
+  color: #ffffff;
+}
+
+.heroContainer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 1299px) {
+  .heroContainer {
+    justify-content: center;
+  }
+}
+
+.heroContent {
+  width: 40%;
+}
+@media (max-width: 1299px) {
+  .heroContent {
+    width: auto;
+    padding: 20px 0;
+    padding-bottom: 60px;
+  }
+}
+
+.heroTitle {
+  font-size: 60px;
+  padding-bottom: 50px;
+}
+@media (max-width: 1299px) {
+  .heroTitle {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+.heroTitleHighlight {
+  color: #ff9900;
+}
+
+.heroHand {
+  display: inline-block;
+  transform-origin: 100% 100%;
+  animation: handWaving 1.5s linear 0s infinite alternate-reverse;
+}
+
+.heroSubtitle {
+  font-size: 25px;
+}
+@media (max-width: 1299px) {
+  .heroSubtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.heroSubtitleHighlight {
+  color: #ff9900;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: bold;
+}
+@media (max-width: 1299px) {
+  .heroSubtitleHighlight {
+    font-size: 18px;
+  }
+}
+
+.heroImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImgHolder {
+  position: relative;
+  width: 90%;
+}
+@media (max-width: 1299px) {
+  .heroImgHolder {
+    width: 60%;
+  }
+}
+
+.heroImgHolder::before,
+.heroImgHolder::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-5%, -2.5%) rotate(3deg);
+  width: 100%;
+  height: 100%;
+  border: 9px solid #fff;
+  border-radius: 50% 15% 50% 15%;
+  animation: avatarAnimation 6s linear 0s infinite both;
+}
+
+.heroImgHolder::after {
+  transform: translate(-2%, 5%) rotate(-5deg);
+  border: 9px solid #00a7ea;
+  animation: avatarAnimation 6s linear 3s infinite both;
+}
+
+.heroImg {
+  width: 100%;
+  display: block;
+  border-radius: 50% 15% 50% 15%;
+  box-shadow: 0 0 15px 3px #00a7ea;
+  animation: avatarGlow 6s linear 0s infinite both;
+}
+
+@keyframes avatarAnimation {
+  0% {
+    transform: translate(-5%, -2.5%) rotate(3deg);
+  }
+  50% {
+    transform: translate(3%, 1.5%) rotate(-5deg) scale(1.03);
+  }
+  100% {
+    transform: translate(-5%, -2.5%) rotate(3deg);
+  }
+}
+@keyframes avatarGlow {
+  50% {
+    box-shadow: 0 0 15px 10px #ff9900;
+  }
+}
+@keyframes handWaving {
+  0% {
+    rotate: -10deg;
+  }
+  100% {
+    rotate: 10deg;
+  }
+}
