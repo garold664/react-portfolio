@@ -19,7 +19,7 @@ const projects = [
       'React project: React, Typescript, Firebase, Sass. You can add new posts, sort posts by title, date, author, reactions number or content.',
     image: './assets/images/posts-redux.png',
     category: 'React',
-    demo: 'https://garold664.github.io/react-redux-posts/',
+    demo: 'https://react-redux-posts.onrender.com/',
     github: 'https://github.com/garold664/react-redux-posts/',
   },
   {
