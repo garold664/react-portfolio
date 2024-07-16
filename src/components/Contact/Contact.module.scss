@@ -4,6 +4,7 @@
   background-color: $dark-color;
   color: $white-color;
   padding: 70px 0;
+  scroll-snap-align: center;
 
   h2 {
     @extend %title;

@@ -3,6 +3,7 @@
 .portfolio {
   background-color: $white-color;
   color: $dark-color;
+  scroll-snap-align: center;
 }
 
 .portfolioContainer {
