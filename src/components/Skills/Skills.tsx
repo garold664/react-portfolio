@@ -1,7 +1,13 @@
+import { motion, Variants } from 'framer-motion';
+
 import styles from './Skills.module.scss';
-export default function Skills() {
+
+interface SkillsProps {
+  variants: Variants;
+}
+export default function Skills({ variants }: SkillsProps) {
   return (
-    <div className={styles.skills}>
+    <motion.div variants={variants} className={styles.skills}>
       <h2 className={styles.skillsTitle}>Skills: </h2>
       <ul className={styles.skillsList}>
         <li className={styles.skillsItem}>
@@ -38,6 +44,6 @@ export default function Skills() {
           />
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 }
