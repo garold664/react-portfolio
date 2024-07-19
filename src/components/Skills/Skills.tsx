@@ -9,15 +9,18 @@ interface SkillsProps {
 const listVariants: Variants = {
   initial: {
     y: -100,
+    boxShadow: '0 10px 10px 0px #00a7ea',
   },
   animate: {
     y: 0,
+    boxShadow: '0 0px 0px 0px #00a7ea',
     transition: {
       duration: 0.5,
       staggerChildren: 0.2,
       staggerDirection: 1,
-      // repeat: Infinity,
-      // repeatDelay: 5,
+      when: false,
+      repeat: Infinity,
+      repeatDelay: 5,
     },
   },
 };
@@ -25,12 +28,7 @@ export default function Skills({ variants }: SkillsProps) {
   return (
     <motion.div variants={variants} className={styles.skills}>
       <h2 className={styles.skillsTitle}>Skills: </h2>
-      <motion.ul
-        variants={listVariants}
-        initial={'initial'}
-        animate={'animate'}
-        className={styles.skillsList}
-      >
+      <motion.ul className={styles.skillsList}>
         <motion.li variants={listVariants} className={styles.skillsItem}>
           <img src="./assets/icons/html5.svg" alt="HTML5" title="HTML5" />
         </motion.li>
