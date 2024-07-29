@@ -58,6 +58,16 @@ const projects = [
     demo: 'https://garold664.github.io/landing-page-1/',
     github: 'https://github.com/garold664/landing-page-1',
   },
+  {
+    id: 7,
+    name: 'Realtime Chat',
+    description:
+      'Next.js, Next-Auth, OAuth, Upstash Redis, Pusher (websockets)',
+    image: './assets/images/realtime-chat.png',
+    category: 'Next.js',
+    demo: 'https://nextjs-realtime-chat-kappa.vercel.app/',
+    github: 'https://github.com/garold664/nextjs-realtime-chat',
+  },
 ];
 
 const projectCategories = [
